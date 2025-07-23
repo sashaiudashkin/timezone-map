@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+   font-family: "Montserrat", sans-serif;
+}
+
+/* div.marker-icon-image{
+    width: 10px;
+    height: 10px;
+    border-radius: 25px;
+    background-color: #000000;
+} */
+
+
+div.marker-icon-text{
+    color: #FFFFFF;
+    font-size: 9px;
+        margin-left: 25px;
+    margin-top: 16px;
+    width: 70px;
+}
+
+div.marker-icon-text > p{
+    margin: -8px;
+}
+
+div.popup-image img{
+    width: 300px;
+    height: 100px;
+    margin-top: -10px;
+}
+
+/* hide the "X" close symbol in the popup window */
+.mapboxgl-popup-close-button{
+    display: none;
+}
+
+.mapboxgl-popup-content{
+    background: none;
+}
+
+.mapboxgl-popup-tip{
+    display: none;
+}
+
+.marker {
+  /* background-color: red; */
+  /* width: 15px;
+  height: 15px;
+  border-radius: 50%; */
+  cursor: pointer;
+
+  width: 10px;
+    height: 10px;
+    border-radius: 25px;
+    background-color: #000000;
+}
+
+.active {
+    background-color: #FFFFFF;
+}
+
+      
+
+   
