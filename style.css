@@ -64,6 +64,8 @@ div.popup-image img{
 
 .active {
     background-color: #FFFFFF;
+    width: 13px;
+    height: 13px;
 }
 
       
