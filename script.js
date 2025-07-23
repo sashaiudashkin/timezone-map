@@ -109,9 +109,9 @@ $.getJSON(
           $(el).addClass("active");
         });
 
-        // popup.on("close", function () {
-        //   $(el).removeClass("active");
-        // });
+        popup.on("close", function () {
+          $(el).removeClass("active");
+        });
       }
     });
 
