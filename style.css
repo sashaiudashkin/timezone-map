@@ -32,7 +32,7 @@ div.marker-icon-text > p{
 
 div.popup-image img{
     width: 300px;
-    height: 100px;
+    height: 159px;
     margin-top: -10px;
 }
 
@@ -64,8 +64,6 @@ div.popup-image img{
 
 .active {
     background-color: #FFFFFF;
-    width: 13px;
-    height: 13px;
 }
 
       
