@@ -39,7 +39,7 @@ map.on("load", () => {
 
 // add points from Google Sheets table
 $.getJSON(
-  "https://sheets.googleapis.com/v4/spreadsheets/1i174PBQXnEr436_j3ugQskMFhvB_jgyw8QiayWqWctI/values/Sheet2!A2:J3000?majorDimension=ROWS&key=AIzaSyAC0xe-T82T5td_Kjotz_vvtewJJs-ilYE",
+  "https://sheets.googleapis.com/v4/spreadsheets/1i174PBQXnEr436_j3ugQskMFhvB_jgyw8QiayWqWctI/values/Sheet1!A2:J3000?majorDimension=ROWS&key=AIzaSyAC0xe-T82T5td_Kjotz_vvtewJJs-ilYE",
   function (response) {
     var coordsArray = [];
 
