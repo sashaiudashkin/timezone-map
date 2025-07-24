@@ -7,7 +7,7 @@ const bounds = [
 ];
 const map = new mapboxgl.Map({
   container: "map",
-  style: "mapbox://styles/sashaiudashkin/cmdgcgsx4000201s8dtcifnda",
+  style: "mapbox://styles/sashaiudashkin/cmdhp77m4000c01sk5wu46x1e",
   config: {
     basemap: {
       theme: "monochrome",
@@ -56,7 +56,7 @@ $.getJSON(
         var iframe = marker[8];
         var picture = marker[9];
 
-        iframeModified = iframe.replace(/si=[^"&]+/, "autoplay=1&mute=1");
+        iframeModified = iframe.replace(/si=[^"&]+/, "autoplay=1&mute=1&controls=0&modestbranding=1&rel=0");
         iframeModified = iframeModified.replace(
           'width="560"',
           '"width="300px"'
