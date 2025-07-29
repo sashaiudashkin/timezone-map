@@ -56,7 +56,10 @@ $.getJSON(
         var iframe = marker[8];
         var picture = marker[9];
 
-        iframeModified = iframe.replace(/si=[^"&]+/, "autoplay=1&mute=1&controls=0&modestbranding=1&rel=0");
+        iframeModified = iframe.replace(
+          /si=[^"&]+/,
+          "autoplay=1&mute=1&controls=0&modestbranding=1&rel=0"
+        );
         iframeModified = iframeModified.replace(
           'width="560"',
           '"width="300px"'
@@ -73,7 +76,9 @@ $.getJSON(
         el.className = "marker " + markerId;
 
         el.innerHTML =
-          "<div class='marker-icon-text-container'><div class='marker-icon-text'><p>" +
+          "<div class='marker-icon-text-container'><div class='marker-icon-text' id='marker-icon-text-id-" +
+          markerId +
+          "'><p>" +
           name +
           "</p><p>" +
           subscribers +
@@ -107,10 +112,17 @@ $.getJSON(
 
         popup.on("open", function () {
           $(el).addClass("active");
+          $(el).css("width", "15px");
+          $(el).css("height", "15px");
+          // $("div.marker-icon-text").css("visibility", "visible");
+          $("div#marker-icon-text-id-" + markerId).css("visibility", "visible");
         });
 
         popup.on("close", function () {
           $(el).removeClass("active");
+          $(el).css("width", "10px");
+          $(el).css("height", "10px");
+          $("div.marker-icon-text").css("visibility", "hidden");
         });
       }
     });
@@ -123,6 +135,9 @@ $.getJSON(
     $(".mapboxgl-canvas").click(function () {
       $(".mapboxgl-popup").remove();
       $(".marker").removeClass("active");
+      $(".marker").css("width", "10px");
+      $(".marker").css("height", "10px");
+      $("div.marker-icon-text").css("visibility", "hidden");
     });
 
     // $(".marker-icon-text").click(function () {
